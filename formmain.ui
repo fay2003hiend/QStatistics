@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormMain</class>
+ <widget class="QWidget" name="FormMain">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>QStatistics &lt;fay2003hiend@gmail.com&gt;</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <widget class="QLineEdit" name="edit_separator">
+       <property name="placeholderText">
+        <string>Separator</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="edit_columns_to_show">
+       <property name="placeholderText">
+        <string>Columns to show, seprated by ,</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_skip_percentage">
+       <property name="text">
+        <string>Skip first % samples:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QSlider" name="slide_skip_percentage">
+         <property name="maximum">
+          <number>100</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTextBrowser" name="textBrowser">
+     <property name="font">
+      <font>
+       <family>DejaVu Sans Mono</family>
+      </font>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QPushButton" name="btn_open">
+       <property name="text">
+        <string>Open</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_clear_log">
+       <property name="text">
+        <string>Clear log</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_reload">
+       <property name="text">
+        <string>Reload</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>edit_separator</tabstop>
+  <tabstop>edit_columns_to_show</tabstop>
+  <tabstop>slide_skip_percentage</tabstop>
+  <tabstop>textBrowser</tabstop>
+  <tabstop>btn_open</tabstop>
+  <tabstop>btn_clear_log</tabstop>
+  <tabstop>btn_reload</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btn_clear_log</sender>
+   <signal>clicked()</signal>
+   <receiver>textBrowser</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>153</x>
+     <y>454</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>149</x>
+     <y>393</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
