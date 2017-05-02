@@ -150,14 +150,17 @@ void FormMain::slot_changeSkipPercentage(int value)
 
 void FormMain::slot_open()
 {
-    QString path = QFileDialog::getOpenFileName(this, tr("Open data file"), _path);
-    if (path.isEmpty())
+    QStringList pathList = QFileDialog::getOpenFileNames(this, tr("Open data file"), _path);
+    if (pathList.isEmpty())
     {
         return;
     }
 
-    _path = path;
-    slot_reload();
+    foreach(const QString& path, pathList)
+    {
+        _path = path;
+        slot_reload();
+    }
 }
 
 QString get_columns(const QList<int>& list)
